@@ -1,0 +1,28 @@
+:root{--font:Arial,Helvetica,sans-serif;--bg:linear-gradient(135deg,#ff5f6d,#ffc371);--surface:#fff;--text:#2d2233;--accent:#c2264a;--on-accent:#fff;--radius:20px;--radius-small:999px;--border:none;--button-border:1px solid #c2264a;--shadow:0 20px 40px rgba(90,20,40,.3);--blur:none;--title:1.75rem;--input-bg:#fff;--input-text:#222}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px 16px;font-family:var(--font);background:var(--bg);color:var(--text);background-attachment:fixed}
+.card{width:min(440px,100%);padding:32px;background:var(--surface);border-radius:var(--radius);border:var(--border);box-shadow:var(--shadow);text-align:center;backdrop-filter:var(--blur)}
+h1{margin:0 0 16px;font-size:var(--title)}
+p{line-height:1.5}
+.big{font-size:2.75rem;font-weight:700;margin:12px 0;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.muted{opacity:.75}
+.tag{margin:24px 0 0;font-size:.8rem;opacity:.7}
+.row{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.stack{display:grid;gap:10px;margin-top:12px}
+button{font:inherit;font-weight:600;padding:10px 18px;border:var(--button-border);border-radius:var(--radius-small);background:var(--accent);color:var(--on-accent);cursor:pointer}
+button:hover{filter:brightness(1.08)}
+button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid var(--text);outline-offset:2px}
+input,select,textarea{font:inherit;width:100%;padding:10px 12px;border:var(--button-border);border-radius:var(--radius-small);background:var(--input-bg);color:var(--input-text)}
+.row input,.row select{flex:1 1 100px;width:auto}
+input[type=color]{height:48px;padding:4px}
+textarea{min-height:120px;resize:vertical}
+ul.list{list-style:none;margin:16px 0 0;padding:0;text-align:left}
+ul.list li{padding:10px 4px;border-bottom:1px solid currentColor;cursor:pointer}
+.plain{text-align:left}
+.swatch{height:120px;border-radius:var(--radius-small);margin:12px 0;background:#888}
+.board{display:grid;grid-template-columns:repeat(3,72px);gap:8px;justify-content:center;margin-top:12px}
+.board button{height:72px;padding:0;font-size:1.75rem}
+.active{outline:3px solid var(--text);outline-offset:1px}
+details{text-align:left;padding:10px 0;border-bottom:1px solid currentColor}
+summary{cursor:pointer;font-weight:600}
+dialog{border:var(--border);border-radius:var(--radius);padding:24px;background:#fff;color:#222}
